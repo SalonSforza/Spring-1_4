@@ -25,5 +25,8 @@ public class UserServiceImp implements UserService {
    public List<User> listUsers() {
       return userDao.listUsers();
    }
-
+   @Transactional
+   public List<User> listUsersByCars(String model, int series){
+      return userDao.listUsersByCars(model, series);
+   }
 }
